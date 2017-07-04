@@ -16,16 +16,24 @@ export class MyApp {
 
   pages: Array<{title: string, component: any}>;
 
+  AuthedPages:Array<{title:string,component:any}> = [
+    { title: 'Home', component: HomePage },
+    { title: 'List', component: ListPage }
+  ];
+
+  nonAuthedPages:Array<{title:string,component:any}> = [
+   
+  ]
+
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
-    this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'List', component: ListPage }
-    ];
+    this.pages = this.AuthedPages;
 
   }
+
+
 
   initializeApp() {
     this.platform.ready().then(() => {
