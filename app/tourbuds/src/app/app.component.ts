@@ -3,9 +3,10 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
-
+import { ContactlistPage  } from '../pages/contactlist-page/contactlist-page'
+import { CurrentuserPage } from '../pages/currentuser-page/currentuser-page'
+import { LoginPage } from '../pages/login-page/login-page'
+import { SignupPage } from '../pages/signup-page/signup-page'
 
 @Component({
   templateUrl: 'app.html',
@@ -13,24 +14,33 @@ import { ListPage } from '../pages/list/list';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
+  authed:boolean = false
+
+
+  rootPage: any = ContactlistPage;
 
   pages: Array<{title: string, component: any}>;
 
   AuthedPages:Array<{title:string,component:any}> = [
-    { title: 'Home', component: HomePage },
-    { title: 'List', component: ListPage }
+    { title: 'Contat', component: ContactlistPage },
+    { title: 'CurrentUser', component: CurrentuserPage }
   ];
 
   nonAuthedPages:Array<{title:string,component:any}> = [
-   
+    { title: 'Sign Up', component: SignupPage },
+    { title: 'Login In', component: LoginPage }
   ]
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
-    this.pages = this.AuthedPages;
+
+    if (this.authed){
+      this.pages = this.AuthedPages;
+    }else{
+      this.pages = this.nonAuthedPages;
+    }
 
   }
 
