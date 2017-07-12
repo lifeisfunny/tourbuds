@@ -1,0 +1,17 @@
+{
+  "name": "tourbuds",
+  "version": "0.0.0",
+  "description": "tourbuds native interface",
+  "cordova": {
+    "id": "org.tourbuds.native",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "author": "yinxi-ni",
+  "license": "isc"
+}

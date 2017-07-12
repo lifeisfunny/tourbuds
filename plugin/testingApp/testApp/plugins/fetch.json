@@ -6,5 +6,13 @@
         },
         "is_top_level": true,
         "variables": {}
+    },
+    "org.tourbuds.native": {
+        "source": {
+            "type": "local",
+            "path": "/Users/haoni/Documents/tourbuds/plugin/testingapp/testapp/node_modules/tourbuds"
+        },
+        "is_top_level": true,
+        "variables": {}
     }
 }
