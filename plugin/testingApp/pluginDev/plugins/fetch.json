@@ -1,0 +1,18 @@
+{
+    "cordova-plugin-whitelist": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-whitelist@1"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "org.tourbuds.native": {
+        "source": {
+            "type": "local",
+            "path": "/Users/haoni/Documents/tourbuds/plugin/testingapp/pluginDev/node_modules/tourbuds"
+        },
+        "is_top_level": true,
+        "variables": {}
+    }
+}
