@@ -12,11 +12,13 @@
     "dependencies": {
         "cordova-ios": "^4.4.0",
         "cordova-plugin-whitelist": "^1.3.2",
-        "tourbuds": "file:///Users/haoni/Documents/tourbuds/plugin/pluginSrc/tourbuds"
+        "tourbuds": "file:///Users/haoni/Documents/tourbuds/plugin/pluginSrc/tourbuds",
+        "org.tourbuds.native": "/Users/haoni/Documents/tourbuds/plugin/pluginSrc/tourbuds"
     },
     "cordova": {
         "plugins": {
-            "cordova-plugin-whitelist": {}
+            "cordova-plugin-whitelist": {},
+            "org.tourbuds.native": {}
         },
         "platforms": [
             "ios"
